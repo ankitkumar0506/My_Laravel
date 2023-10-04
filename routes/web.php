@@ -20,6 +20,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/home',[HomeController::class,'index']);
-Route::get('/register',[AuthController::class,'index']);
+
+Route::get('/register',[AuthController::class,'index1']);
 Route::post('/register',[AuthController::class,'store']);
+
+Route::get('/login',[AuthController::class,'index1']);
+Route::post('/login',[AuthController::class,'validate_login']);
+
+
+
 

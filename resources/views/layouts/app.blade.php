@@ -75,7 +75,7 @@
                                                 <ul class="ht-setting-list">
                                                     <li><a name="register" href="/register">My Account</a></li>
                                                     <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a name="register" href="/register">Sign In</a></li>
+                                                    <li><a name="logout" href="/home">Log Out</a></li>
                                                 </ul>
                                             </div>
                                         </li>
