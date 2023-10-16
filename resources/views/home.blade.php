@@ -255,10 +255,20 @@
                     <div class="special-product-active owl-carousel">
                         <div class="col-lg-12">
                             <!-- single-product-wrap start -->
+
+
+
+
+
+
+
+
+
                             <div class="single-product-wrap">
                                 <div class="product-image">
+                                    @foreach ($products as $iteam)
                                     <a href="single-product.html">
-                                        <img src="images/product/large-size/1.jpg" alt="Li's Product Image">
+                                        <img src="storage/{{$iteam->image}}" alt="Li's Product Image">
                                     </a>
                                     <span class="sticker">New</span>
                                 </div>
@@ -266,7 +276,7 @@
                                     <div class="product_desc_info">
                                         <div class="product-review">
                                             <h5 class="manufacturer">
-                                                <a href="shop-left-sidebar.html">Graphic Corner</a>
+                                                <a href="shop-left-sidebar.html">{{ $iteam->name }}</a>
                                             </h5>
                                             <div class="rating-box">
                                                 <ul class="rating">
@@ -278,9 +288,9 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
+                                        <h4><a class="product_name" href="single-product.html"> {{ $iteam->description }}</a></h4>
                                         <div class="price-box">
-                                            <span class="new-price">$46.80</span>
+                                            <span class="new-price">{{ $iteam->price }}</span>
                                         </div>
                                         <div class="countersection">
                                             <div class="li-countdown"></div>
@@ -293,10 +303,11 @@
                                             <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
                                         </ul>
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <!-- single-product-wrap end -->
-                        </div>
+                        {{-- </div>
                         <div class="col-lg-12">
                             <!-- single-product-wrap start -->
                             <div class="single-product-wrap">
@@ -430,9 +441,9 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- single-product-wrap end -->
-                        </div>
+                        {{-- </div>
                         <div class="col-lg-12">
                             <!-- single-product-wrap start -->
                             <div class="single-product-wrap">
@@ -522,7 +533,7 @@
                                 </div>
                             </div>
                             <!-- single-product-wrap end -->
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
