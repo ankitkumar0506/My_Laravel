@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
+use Monolog\Formatter\GoogleCloudLoggingFormatter;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,11 @@ Route::post('/register',[AuthController::class,'store']);
 Route::get('/login',[AuthController::class,'index1']);
 Route::post('/login',[AuthController::class,'validate_login']);
 
+//
 
 
+
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 

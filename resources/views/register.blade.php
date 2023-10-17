@@ -41,7 +41,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
             <!-- Login Form s-->
-            <form action="/login" method="POST" >
+            <form action="/home" method="POST" >
                 @csrf
                 {{-- @dd($request); --}}
                 @endphp
@@ -56,6 +56,12 @@
                             <label>Password</label>
                             <input class="mb-0" type="password" name="password" placeholder="Password">
                         </div>
+                    </div>
+                    <div class="flex items-center justify-end mt-4">
+                        <a href="{{ url('auth/google') }}">
+                            <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" style="margin-left: 3em;">
+                        </a>
+                    </div>
                         <div class="col-md-8">
                             <div class="check-box d-inline-block ml-0 ml-md-2 mt-10">
                                 <input type="checkbox" id="remember_me">
